@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.repositories.RentalRepository"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.services.RentalService"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.services.CustomerService"/>
+    <fullyQualifiedTypeName name="com.sun.el.stream.Optional"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.entities.Rental"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.repositories.CarRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.services.CarService"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.controllers.CarController"/>
+    <fullyQualifiedTypeName name="org.springframework.http.client.AbstractClientHttpResponse"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="org.springframework.web.context.request.RequestContextHolder"/>
+    <fullyQualifiedTypeName name="org.springframework.web.context.request.ServletRequestAttributes"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.entities.Customer"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.repositories.CustomerRepository"/>
+    <fullyQualifiedTypeName name="com.skilldistillery.rental.entities.Car"/>
+</qualifiedTypeNameHistroy>

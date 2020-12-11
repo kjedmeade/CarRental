@@ -1,0 +1,8 @@
+package com.skilldistillery.rental.services;
+
+import java.util.List;
+
+
+public interface CarService {
+
+

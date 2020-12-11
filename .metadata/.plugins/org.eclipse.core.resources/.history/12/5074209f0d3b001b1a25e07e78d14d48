@@ -1,0 +1,67 @@
+package com.skilldistillery.rental.controllers;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.client.AbstractClientHttpResponse;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.context.request.RequestContextHolder;
+
+import com.skilldistillery.rental.entities.Customer;
+import com.skilldistillery.rental.repositories.CustomerRepository;
+import com.skilldistillery.rental.services.CustomerService;
+@SpringBootTest
+class CustomerControllerTest {
+
+
+	@Autowired
+	private CustomerRepository repo;
+	
+	@Autowired
+	private CustomerService cSvc;
+	
+	@Autowired 
+	private CustomerController cCon;
+	
+	private HttpServletRequest req;
+	private HttpServletResponse resp;
+	@Test
+	@DisplayName("List Customers")
+	void test1() {
+		assertNotNull(cCon);
+		assertNotNull(cCon.listAllCustomers(resp));
+		assertTrue(cCon.listAllCustomers(resp).size() >0);
+	
+	}
+	
+	@Test
+	@DisplayName("Create Customer")
+	void test2() {
+		Customer newCustomer = new Customer();
+	    RequestContextHolder.setRequestAttributes(new ServletRequestAttributes(resp));
+
+	     ResponseEntity<Object> responseEntity = employeeController.addEmployee(employee);
+	     assertThat(responseEntity.getStatusCodeValue()).isEqualTo(201);
+	     assertThat(responseEntity.getHeaders().getLocation().getPath()).isEqualTo("/1");
+
+		assertNotNull(cCon);
+		assertNotNull(cCon.createNewCustomer(newCustomer, resp, req));
+
+	
+	}
+	
+      
+//     when(employeeDAO.addEmployee(any(Employee.class))).thenReturn(true);
+      
+     Employee employee = new Employee(1, "Lokesh", "Gupta", "howtodoinjava@gmail.com");
+      
+
+	
+}

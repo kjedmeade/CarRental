@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="rental"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="true"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="car"/>
+			<item value="Car"/>
+			<item value="cars"/>
+			<item value="cSvc"/>
+			<item value="cCon"/>
+			<item value="customer"/>
+			<item value="Customer"/>
+			<item value="rSvc"/>
+			<item value="rental"/>
+			<item value="Rental"/>
+			<item value="pBServ"/>
+			<item value="pbServ"/>
+			<item value="bookings"/>
+			<item value="booking"/>
+			<item value="Booking"/>
+		</list>
+		<list key="replacehistory">
+			<item value="rental"/>
+			<item value="Rental"/>
+			<item value="customer"/>
+			<item value="Customer"/>
+			<item value="customers"/>
+			<item value="rSvc"/>
+			<item value="rCon"/>
+			<item value="car"/>
+			<item value="Car"/>
+			<item value="cSvc"/>
+			<item value="rentals"/>
+			<item value="rentalB"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="975"/>
+		<item key="DIALOG_Y_ORIGIN" value="122"/>
+		<item key="DIALOG_WIDTH" value="294"/>
+		<item key="DIALOG_HEIGHT" value="408"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+</section>

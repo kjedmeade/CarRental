@@ -1,0 +1,33 @@
+package com.skilldistillery.rental.entities;
+
+import java.time.LocalDate;
+
+@Entity
+public class Customer {
+
+				
+				@Id
+				@GeneratedValue(strategy = GenerationType.IDENTITY)
+				private int id;
+				
+				private String  type;
+				
+				@LocalDate
+				@Column(name = "start_date")
+				private String  startDate;
+				
+				@LocalTime
+				@Column(name = "start_time")
+				private String  start_time;
+				
+				@LocalDate
+				@Column(name = "end_date")
+				private String  endDate;
+				
+				@LocalTime
+				@Column(name = "end_time")
+				private String  end_time;
+				
+				
+}
+

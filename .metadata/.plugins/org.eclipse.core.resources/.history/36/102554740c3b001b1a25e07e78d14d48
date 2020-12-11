@@ -1,0 +1,54 @@
+package com.skilldistillery.rental.controllers;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.client.AbstractClientHttpResponse;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.skilldistillery.rental.entities.Rental;
+import com.skilldistillery.rental.repositories.RentalRepository;
+import com.skilldistillery.rental.services.RentalService;
+@SpringBootTest
+class RentalControllerTest {
+
+
+	@Autowired
+	private RentalRepository repo;
+	
+	@Autowired
+	private RentalService rSvc;
+	
+	@Autowired 
+	private RentalController rCon;
+	
+	private HttpServletResponse resp;
+	private HttpServletRequest req;
+	@Test
+	@DisplayName("List Rentals")
+	void test1() {
+		assertNotNull(rCon);
+		assertNotNull(rCon.listAllRentals(resp));
+		assertTrue(rCon.listAllRentals(resp).size() >0);
+	
+	}
+	
+	@Test
+	@DisplayName("Create Rental")
+	void test2() {
+		Rental newRental = new Rental(2020-10-02);
+		assertNotNull(rCon);
+		assertNotNull(rCon.createNewRental(newRental, resp, req));
+
+	
+	}
+
+	
+}

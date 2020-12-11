@@ -1,0 +1,5 @@
+package com.skilldistillery.rental.controllers;
+
+public class RentalController {
+
+}

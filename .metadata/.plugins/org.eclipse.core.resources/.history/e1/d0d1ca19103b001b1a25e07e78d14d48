@@ -1,0 +1,61 @@
+package com.skilldistillery.rental.services;
+
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.skilldistillery.rental.entities.Customer;
+import com.skilldistillery.rental.entities.Customer;
+import com.skilldistillery.rental.repositories.CustomerRepository;
+
+@SpringBootTest
+public class CustomerServiceTest {
+	
+	
+	@Autowired
+	private CustomerRepository repo;
+	
+	@Autowired
+	private CustomerService cSvc;
+	
+	@Test
+	@DisplayName("Get All Customers")
+	void test1() {
+		assertNotNull(cSvc.listAllCustomers());
+		assertTrue(cSvc.listAllCustomers().size() >0);
+	
+	}
+	
+	@Test
+	@DisplayName("Get Single Customer")
+	void test2() {
+
+		assertNotNull(cSvc.);
+		assertEquals("Sedan", cSvc.findCustomerById(1).getType());
+
+	
+	}
+	
+	@Test
+	@DisplayName("Get Type")
+	void test3() {
+		Customer customer = new Customer("Greg");
+		assertTrue(cSvc.createNewCustomer((customer) != null);
+
+	}
+		
+		
+	
+
+
+}

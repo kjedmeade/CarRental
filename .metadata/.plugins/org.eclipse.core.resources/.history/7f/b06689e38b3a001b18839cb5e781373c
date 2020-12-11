@@ -1,0 +1,101 @@
+package com.skilldistillery.videostorerest.repositories;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.skilldistillery.jpavideostore.entities.Film;
+import com.skilldistillery.jpavideostore.entities.Language;
+import com.skilldistillery.jpavideostore.entities.Rating;
+
+@SpringBootTest
+class FilmRepositoryTest {
+
+	@Autowired
+	private FilmRepository repo;
+	
+	@Test
+	@DisplayName("find all")
+	void test1() {
+		List <Film> films = repo.findAll();
+		assertNotNull(films);
+		assertTrue(films.size()>0);
+		assertEquals(1000, films.size());
+		}
+	
+	@Test
+	@DisplayName("find by Title")
+	void test2() {
+		Film f  = repo.findByTitle("ANGELS LIFE");
+		assertEquals(25, f.getId());
+	}
+	
+//	@Test
+//	@DisplayName("find by Language")
+//	void test3() {
+//	Language lang = new Language();
+//	lang.setId(3);
+//	List<Film> films = repo.findByLanguage(lang);
+//	assertTrue(films.size()>0);
+//	assertEquals(9, films.size());
+//	}
+	
+	@Test
+	@DisplayName("find by Language")
+	void test3() {
+		
+		List<Film> films = repo.findByLanguage_Name("Japanese");
+		assertTrue(films.size()>0);
+		assertNotNull(films);
+		assertEquals(9, films.size());
+	}
+	
+	@Test
+	@DisplayName("find by Language")
+	void test4() {
+		
+		List<Film> films = repo.findByLanguage_Id(3);
+		assertTrue(films.size()>0);
+		assertNotNull(films);
+		assertEquals(9, films.size());
+	}
+	
+	@Test
+	@DisplayName("find by Language and release year")
+	void test5() {
+		Language lang = new Language();
+		lang.setId(3);
+		List<Film> films = repo.findByLanguageAndReleaseYear(lang, 2006);
+		assertTrue(films.size()>0);
+		assertNotNull(films);
+		assertEquals(2, films.size());
+	}
+
+	
+	@Test
+	@DisplayName("find by ReplacementCost within a range")
+	void test6() {
+		List<Film> films = repo.findByReplacementCostGreaterThanEqualAndReplacementCostLessThanEqual(10, 20);
+		assertTrue(films.size()>0);
+		assertNotNull(films);
+		assertEquals(473, films.size());
+
+	}
+	
+	@Test
+	@DisplayName("find by Rating")
+	void test7() {
+		List<Film> films = repo.findByRating(Rating.G);
+		assertTrue(films.size()>0);
+		assertNotNull(films);
+		assertEquals(178, films.size());
+
+	}
+}

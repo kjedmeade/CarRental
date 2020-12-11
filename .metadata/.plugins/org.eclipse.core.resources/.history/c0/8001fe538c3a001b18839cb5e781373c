@@ -1,0 +1,5 @@
+package com.skilldistillery.rental.repositories;
+
+public class CarRepositoryTest {
+
+}

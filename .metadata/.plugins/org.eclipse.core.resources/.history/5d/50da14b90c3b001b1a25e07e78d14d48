@@ -1,0 +1,54 @@
+package com.skilldistillery.rental.controllers;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.client.AbstractClientHttpResponse;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.skilldistillery.rental.entities.Car;
+import com.skilldistillery.rental.repositories.CarRepository;
+import com.skilldistillery.rental.services.CarService;
+@SpringBootTest
+class CarControllerTest {
+
+
+	@Autowired
+	private CarRepository repo;
+	
+	@Autowired
+	private CarService cSvc;
+	
+	@Autowired 
+	private CarController cCon;
+	
+	private HttpServletResponse resp;
+	private HttpServletRequest req;
+	@Test
+	@DisplayName("List Cars")
+	void test1() {
+		assertNotNull(cCon);
+		assertNotNull(cCon.listAllCars(resp));
+		assertTrue(cCon.listAllCars(resp).size() >0);
+	
+	}
+	
+	@Test
+	@DisplayName("Create Car")
+	void test2() {
+		Car newCar = new Car("Sedan");
+		assertNotNull(cCon);
+		assertNotNull(cCon.createNewCar(newCar, resp, req));
+
+	
+	}
+
+	
+}
